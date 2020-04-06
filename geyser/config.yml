@@ -48,7 +48,7 @@ ping-passthrough: true
 max-players: 20
 
 # If debug messages should be sent through console
-debug-mode: false
+debug-mode: true
 
 # Thread pool size
 general-thread-pool: 32
