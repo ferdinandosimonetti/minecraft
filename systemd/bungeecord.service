@@ -1,24 +1,15 @@
 [Unit]
-Description=Bungeecord interface server
-After=local-fs.target network.target
+Description=Minecraft server - BungeeCord
+After=local-fs.target network.target minecraft.service
 
 [Service]
-WorkingDirectory=/home/ubuntu/minecraft
+WorkingDirectory=/home/ubuntu/minecraft/bungeecord
 User=ubuntu
 Group=minecraft
-Type=forking
-# Run it as a non-root user in a specific directory
-
-ExecStart=/usr/bin/screen -h 1024 -dmS bungee ./bin/bungee-start.sh
-# I like to keep my commandline to launch it in a separate file
-# because sometimes I want to change it or launch it manually
-# If it's in the WorkingDirectory, then we can use a relative path
-
-# Send "stop" to the Minecraft server console
-ExecStop=/usr/bin/screen -p 0 -S bungee -X eval 'stuff \"stop\"\015'
-# Wait for the PID to die - otherwise it's killed after this command finishes!
-ExecStop=/bin/bash -c "while ps -p $MAINPID > /dev/null; do /bin/sleep 1; done"
-# Note that absolute paths for all executables are required!
+Type=simple
+Restart=on-failure
+RestartSec=10
+ExecStart=/usr/bin/java -Xmx512M -Xms512M -jar BungeeCord.jar
 
 [Install]
 WantedBy=multi-user.target
