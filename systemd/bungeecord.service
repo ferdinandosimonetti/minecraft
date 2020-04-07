@@ -9,7 +9,7 @@ Group=minecraft
 Type=simple
 Restart=on-failure
 RestartSec=10
-ExecStart=./bin/bungee-start.sh
+ExecStart=/home/ubuntu/minecraft/bin/bungee-start.sh
 
 [Install]
 WantedBy=multi-user.target
