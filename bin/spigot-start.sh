@@ -1,9 +1,6 @@
 #!/bin/bash
 export SPIGOTVERSION="1.15.2"
 echo $SPIGOTVERSION
-export SERVER="$(find $HOME -name spigot-${BUKKITVERSION}.jar)"
+export SERVER="$(find $HOME -name spigot-${SPIGOTVERSION}.jar)"
 echo $SERVER
-cd $( dirname ${SERVER} )
-cd ..
-java -Xmx6144m -Xms6144m -jar ${SERVER} nogui
-cd -
+java -Xmx4096m -Xms4096m -jar ${SERVER} nogui
