@@ -1,0 +1,15 @@
+[Unit]
+Description=Minecraft proxy - Waterfall
+After=local-fs.target network.target minecraft.service
+
+[Service]
+WorkingDirectory=/home/ubuntu/minecraft
+User=ubuntu
+Group=minecraft
+Type=simple
+Restart=on-failure
+RestartSec=10
+ExecStart=/home/ubuntu/minecraft/bin/waterfall-start.sh
+
+[Install]
+WantedBy=multi-user.target
