@@ -4,4 +4,4 @@ echo $PAPERVERSION
 export SERVER="$(find $HOME -name paper-${PAPERVERSION}.jar)"
 echo $SERVER
 cd $(dirname $SERVER)
-java -Xmx4096m -Xms4096m -jar ${SERVER} nogui
+java -Xmx6144m -Xms6144m -jar ${SERVER} nogui
