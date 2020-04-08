@@ -9,7 +9,7 @@ Group=minecraft
 Type=forking
 # Run it as a non-root user in a specific directory
 
-ExecStart=/usr/bin/screen -h 1024 -dmS paper3./bin/paper-start.sh MONDO3
+ExecStart=/usr/bin/screen -h 1024 -dmS paper3 ./bin/paper-start.sh MONDO3
 # I like to keep my commandline to launch it in a separate file
 # because sometimes I want to change it or launch it manually
 # If it's in the WorkingDirectory, then we can use a relative path
