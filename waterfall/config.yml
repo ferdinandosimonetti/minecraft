@@ -1,15 +1,15 @@
-server_connect_timeout: 10000
 listeners:
 - query_port: 25565
   motd: '&1Luca''s LAN server'
-  tab_list: MONDI
+  tab_list: SERVER
   query_enabled: false
   proxy_protocol: false
   ping_passthrough: true
   priorities:
+  - sopravvivenzafacile
   - mondo1
-  - mondo2
   - mondo3
+  - mondo2
   bind_local_address: false
   host: 192.168.0.168:25565
   max_players: 8
@@ -30,8 +30,9 @@ permissions:
   - bungeecord.command.reload
 log_pings: false
 connection_throttle_limit: 3
-prevent_proxy_connections: false
+server_connect_timeout: 10000
 timeout: 30000
+stats: 09c9beea-0914-4b3f-ac29-ff9ae3d9d177
 player_limit: -1
 ip_forward: true
 groups:
@@ -40,7 +41,7 @@ groups:
 remote_ping_timeout: 10000
 connection_throttle: 4000
 log_commands: false
-stats: 09c9beea-0914-4b3f-ac29-ff9ae3d9d177
+prevent_proxy_connections: false
 online_mode: true
 forge_support: false
 disabled_commands:
@@ -55,6 +56,10 @@ servers:
     address: 127.0.0.1:35565
     restricted: false
   mondo3:
-    motd: '&2MONDO3'
+    motd: '&3MONDO3'
     address: 127.0.0.1:45565
+    restricted: false
+  sopravvivenzafacile:
+    motd: '&3SOPRAVVIVENZAFACILE'
+    address: 192.168.0.164:25565
     restricted: false
