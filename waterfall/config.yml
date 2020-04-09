@@ -60,6 +60,6 @@ servers:
     address: 127.0.0.1:45565
     restricted: false
   sopravvivenzafacile:
-    motd: '&3SOPRAVVIVENZAFACILE'
+    motd: '&4SOPRAVVIVENZAFACILE'
     address: 192.168.0.164:25565
     restricted: false
