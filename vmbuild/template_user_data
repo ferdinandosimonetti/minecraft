@@ -1,0 +1,31 @@
+#cloud-config                                                                                                           
+chpasswd:
+    list: |
+      ubuntu:VMware1!
+    expire: false
+users:
+  - default
+  - name: ubuntu
+    ssh-authorized-keys:
+      - ssh-ed25519 AAAAC3NzaC1lZDI1NTE5AAAAIEXNw2T4EeFxO78JKixN9Fr30YjidZWY+u2cmcBqKhNa
+      - ssh-ed25519 AAAAC3NzaC1lZDI1NTE5AAAAIFZfMvbGfFA3zbLZ2wxIBpkDbPIzq03WUnDMJnaIoJW1
+    sudo: ALL=(ALL) NOPASSWD:ALL
+    groups: sudo
+    shell: /bin/bash
+random_seed:
+    file: /dev/urandom
+    command: ["pollinate", "-r", "-s", "https://entropy.ubuntu.com"]
+    command_required: true
+ntp:
+    servers: ['192.168.0.1']
+package_upgrade: true
+packages:
+  - haveged
+runcmd:
+  - apt -y autoremove
+  - apt clean
+  - echo -n > /etc/machine-id
+final_message: "The system is prepped, after $UPTIME seconds"
+power_state:
+  timeout: 30
+  mode: poweroff

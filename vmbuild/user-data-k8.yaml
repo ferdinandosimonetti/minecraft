@@ -1,5 +1,8 @@
+#cloud-config
+
 groups:
   - docker
+
 users:
   - default
   - name: ubuntu
@@ -9,6 +12,7 @@ users:
     sudo: ALL=(ALL) NOPASSWD:ALL
     groups: sudo, docker
     shell: /bin/bash
+
 apt:
   sources:
     kubernetes:
@@ -20,6 +24,7 @@ apt:
       source: "deb https://download.docker.com/linux/ubuntu bionic stable"
       keyserver: "hkp://keyserver.ubuntu.com:80"
       keyid: 0EBFCD88
+
 package_upgrade: true
 packages:
   - git
@@ -34,6 +39,7 @@ packages:
   - kubectl
   - kubeadm
   - docker-ce
+
 write_files:
   - content: |
         {
@@ -118,6 +124,7 @@ write_files:
             [Network]
             public-network = "VM Network"
     path: /etc/kubernetes/vsphere.conf
+
 runcmd:
   - swapoff --all
   - sed -ri '/\sswap\s/s/^#?/#/' /etc/fstab
@@ -129,6 +136,7 @@ runcmd:
   - 'echo "disable_vmware_customization: false" >> /etc/cloud/cloud.cfg'
   - sed -i 's/D \/tmp 1777 root root -/#D \/tmp 1777 root root -/g' /usr/lib/tmpfiles.d/tmp.conf
   - echo -n > /etc/machine-id
+
 final_message: "The system is prepped, after $UPTIME seconds"
 power_state:
   timeout: 30

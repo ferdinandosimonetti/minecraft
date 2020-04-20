@@ -1,3 +1,5 @@
+#cloud-config
+
 groups:
   - minecraft
 users:
@@ -9,6 +11,7 @@ users:
     sudo: ALL=(ALL) NOPASSWD:ALL
     groups: sudo, minecraft
     shell: /bin/bash
+
 package_upgrade: true
 packages:
   - git
@@ -20,14 +23,20 @@ packages:
   - lsof
   - file
   - openjdk-8-jre-headless
+  - haveged
+
+random_seed:
+    file: /dev/urandom
+    command: ["pollinate", "-r", "-s", "https://entropy.ubuntu.com"]
+    command_required: true
+
 runcmd:
-  - swapoff --all
-  - sed -ri '/\sswap\s/s/^#?/#/' /etc/fstab
-  - 'echo "disable_vmware_customization: false" >> /etc/cloud/cloud.cfg'
-  - sed -i 's/D \/tmp 1777 root root -/#D \/tmp 1777 root root -/g' /usr/lib/tmpfiles.d/tmp.conf
   - echo -n > /etc/machine-id
-  - git clone https://github.com/ferdinandosimonetti/minecraft.git
+  - apt -y autoremove
+  - apt clean
+
 final_message: "The system is prepped, after $UPTIME seconds"
+
 power_state:
   timeout: 30
   mode: poweroff
