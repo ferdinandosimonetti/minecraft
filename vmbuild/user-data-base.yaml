@@ -1,7 +1,5 @@
 #cloud-config
 
-groups:
-  - minecraft
 users:
   - default
   - name: ubuntu
@@ -9,12 +7,22 @@ users:
       - ssh-rsa AAAAB3NzaC1yc2EAAAADAQABAAABAQDCZEriDm4fDkMFXfeefHDjd52Wv4SBikOvu5PG46fEWC+34jvhxaR0fZsHXoiCSENieGALPj19RpZ01fVpE2uGMSKIVmhyzLJSxtfzD0zd5V85kVHYUJgIHOdnyhLmVxySueeUzPcR0DNC4Ev7yuvIhza7Ot857K22GGNA658RnT1m9DCjwWPaJZ5P6QrZjFIGG71YWhmcr7zETM3Hu7CePgBE6lSzrj1AyemuGZDWJpPKM0V/dB9EM+xEoumvS/NJkSFveNTwDLSkPBjlq7BXlaiJx4MCX+cDt+mCZlm6t3e7Bsb5x2H/0P4rmhtf8M9qdsm1LUIlrFvBAWfRB+ud ferdi@DESKTOP-HFA54P3
       - ssh-rsa AAAAB3NzaC1yc2EAAAADAQABAAABgQCpxUnP8vCro31Xt2EcSKc/qB+0S/32UudZOUbyySZveVStUD6TJ4+ZaqYFsdCYLjGHXyo7jyUuwgKMrtP14dHr71easmnhyxeDqNunN2nQMSoph2emspP6lZrH6w+XmWTsau7tSSh8y78Jeq0ebrt0gzGWGBQITxT3MsZ8WR+f1tYrkASNJyYckrbSB3vK34w+LTbsjSa52CVkXCAzbFf6oR/or9luVU9pdj/TnX+OXsMgcSpYeH8o5rAlyBhOFIio5wNXXYZlaBcKOs29xB4oWXjlKRwlz592TIYBIjHHJkXf3kJfZmy+y94aHCs/Ih9QROzR0VFGmxeTPRM+Kf1GbnB8+HyqRWNVpsnvZlPqikfIVU9dyGm1CcpPgwX+/BYs661PMfAZjqgR50Pte1nR+nq0TCQFHp/06px92fXuBVUO6/nl1lPCZqMGcT1jb7OTXk3NpqYnphaUNWhhRrSk7xmi/muYm+jzgZtabptXM2741fLo8QSLodSPrgy2CPE= ferdi@LAPTOP-S6G27617
     sudo: ALL=(ALL) NOPASSWD:ALL
-    groups: sudo, minecraft
+    groups: sudo
     shell: /bin/bash
 
 package_upgrade: true
 packages:
-  - openjdk-8-jre-headless
+  - git
+  - wget
+  - curl
+  - zip
+  - unzip
+  - screen
+  - lsof
+  - file
+  - haveged
+  - ntp
+  - ntpdate
 
 random_seed:
     file: /dev/urandom
@@ -25,10 +33,9 @@ runcmd:
   - echo -n > /etc/machine-id
   - apt -y autoremove
   - apt clean
-  - git clone https://github.com/ferdinandosimonetti/minecraft.git
 
 final_message: "The system is prepped, after $UPTIME seconds"
 
-#power_state:
-#  timeout: 30
-#  mode: poweroff
+power_state:
+  timeout: 30
+  mode: poweroff

@@ -5,7 +5,7 @@
         	[Parameter(Mandatory=$true)]$name
     )
 	$vmhost =  get-vmhost | select -First 1
-	$vm = New-VM -Name $name -VM $template -VMHost $vmhost -DiskStorageFormat "thin"
+	$vm = New-VM -Name $name -Template $template -VMHost $vmhost -DiskStorageFormat "thin"
 	
 	$ovf = Get-VMOvfProperty -VM (Get-VM -Name $name)
 	$ovfPropertyChanges = @{}
