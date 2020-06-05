@@ -4,7 +4,7 @@ $ova = "ubuntu-18.04-server-cloudimg-amd64.ova"
 Start-BitsTransfer -Source $src -Destination $ova
 
 $name = "ubuntu1804template"
-$viserver = "192.168.0.111"
+$viserver = "192.168.0.10"
 connect-viserver -server $viserver -Credential $creds
 $vmhost = get-vmhost | select -First 1
 $network = "VM Network"

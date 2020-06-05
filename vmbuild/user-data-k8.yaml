@@ -101,11 +101,11 @@ write_files:
             port = "443"
             insecure-flag = "1"
 
-            [VirtualCenter "192.168.0.111"]
+            [VirtualCenter "192.168.0.10"]
             datacenters = "DC0"
 
             [Workspace]
-            server = "192.168.0.111"
+            server = "192.168.0.10"
             datacenter = "DC0"
             default-datastore = "datastore1"
             resourcepool-path = "CL0/Resources"
