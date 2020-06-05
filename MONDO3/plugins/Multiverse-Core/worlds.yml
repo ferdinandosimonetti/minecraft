@@ -1,145 +1,4 @@
 worlds:
-  Creativa:
-    ==: MVWorld
-    hidden: 'false'
-    alias: Creativa
-    color: WHITE
-    style: NORMAL
-    pvp: 'true'
-    scale: '1.0'
-    respawnWorld: ''
-    allowWeather: 'true'
-    difficulty: EASY
-    spawning:
-      ==: MVSpawnSettings
-      animals:
-        ==: MVSpawnSubSettings
-        spawn: 'true'
-        spawnrate: '-1'
-        exceptions: []
-      monsters:
-        ==: MVSpawnSubSettings
-        spawn: 'true'
-        spawnrate: '-1'
-        exceptions: []
-    entryfee:
-      ==: MVEntryFee
-      amount: '0.0'
-    hunger: 'true'
-    autoHeal: 'true'
-    adjustSpawn: 'true'
-    portalForm: ALL
-    gameMode: CREATIVE
-    keepSpawnInMemory: 'true'
-    spawnLocation:
-      ==: MVSpawnLocation
-      x: 256.0
-      y: 64.0
-      z: 51.0
-      pitch: 0.0
-      yaw: 0.0
-    autoLoad: 'true'
-    bedRespawn: 'true'
-    worldBlacklist: []
-    environment: NORMAL
-    seed: '-1281068538'
-    generator: 'null'
-    playerLimit: '-1'
-    allowFlight: 'true'
-  Sopravvivenza_nether:
-    ==: MVWorld
-    hidden: 'false'
-    alias: Sopravvivenza_nether
-    color: WHITE
-    style: NORMAL
-    pvp: 'true'
-    scale: '8.0'
-    respawnWorld: ''
-    allowWeather: 'true'
-    difficulty: EASY
-    spawning:
-      ==: MVSpawnSettings
-      animals:
-        ==: MVSpawnSubSettings
-        spawn: 'true'
-        spawnrate: '-1'
-        exceptions: []
-      monsters:
-        ==: MVSpawnSubSettings
-        spawn: 'true'
-        spawnrate: '-1'
-        exceptions: []
-    entryfee:
-      ==: MVEntryFee
-      amount: '0.0'
-    hunger: 'true'
-    autoHeal: 'true'
-    adjustSpawn: 'true'
-    portalForm: ALL
-    gameMode: SURVIVAL
-    keepSpawnInMemory: 'true'
-    spawnLocation:
-      ==: MVSpawnLocation
-      x: 0.0
-      y: 98.0
-      z: 0.0
-      pitch: 0.0
-      yaw: 0.0
-    autoLoad: 'true'
-    bedRespawn: 'true'
-    worldBlacklist: []
-    environment: NETHER
-    seed: '-1669375790710678659'
-    generator: 'null'
-    playerLimit: '-1'
-    allowFlight: 'true'
-  Sopravvivenza_the_end:
-    ==: MVWorld
-    hidden: 'false'
-    alias: Sopravvivenza_the_end
-    color: WHITE
-    style: NORMAL
-    pvp: 'true'
-    scale: '16.0'
-    respawnWorld: ''
-    allowWeather: 'true'
-    difficulty: EASY
-    spawning:
-      ==: MVSpawnSettings
-      animals:
-        ==: MVSpawnSubSettings
-        spawn: 'true'
-        spawnrate: '-1'
-        exceptions: []
-      monsters:
-        ==: MVSpawnSubSettings
-        spawn: 'true'
-        spawnrate: '-1'
-        exceptions: []
-    entryfee:
-      ==: MVEntryFee
-      amount: '0.0'
-    hunger: 'true'
-    autoHeal: 'true'
-    adjustSpawn: 'true'
-    portalForm: ALL
-    gameMode: SURVIVAL
-    keepSpawnInMemory: 'true'
-    spawnLocation:
-      ==: MVSpawnLocation
-      x: 0.0
-      y: 62.0
-      z: 0.0
-      pitch: 0.0
-      yaw: 0.0
-    autoLoad: 'true'
-    bedRespawn: 'true'
-    worldBlacklist: []
-    environment: THE_END
-    seed: '-1669375790710678659'
-    generator: 'null'
-    playerLimit: '-1'
-    allowFlight: 'true'
   Sopravvivenza:
     ==: MVWorld
     hidden: 'false'
@@ -187,14 +46,14 @@ worlds:
     generator: 'null'
     playerLimit: '-1'
     allowFlight: 'true'
-  MONDO3_nether:
+  creativa2:
     ==: MVWorld
     hidden: 'false'
-    alias: ''
+    alias: creativa2
     color: WHITE
     style: NORMAL
     pvp: 'true'
-    scale: '8.0'
+    scale: '1.0'
     respawnWorld: ''
     allowWeather: 'true'
     difficulty: HARD
@@ -221,20 +80,20 @@ worlds:
     keepSpawnInMemory: 'true'
     spawnLocation:
       ==: MVSpawnLocation
-      x: 0.0
-      y: 64.0
-      z: 0.0
-      pitch: 0.0
-      yaw: 0.0
+      x: 141.7173752768373
+      y: 65.0
+      z: 40.19575023503998
+      pitch: 35.09992
+      yaw: -24.601257
     autoLoad: 'true'
     bedRespawn: 'true'
     worldBlacklist: []
-    environment: NETHER
-    seed: '7421857742470553766'
+    environment: NORMAL
+    seed: '2780161086'
     generator: 'null'
     playerLimit: '-1'
     allowFlight: 'true'
-  MONDO3_the_end:
+  creativa2_the_end:
     ==: MVWorld
     hidden: 'false'
     alias: ''
@@ -269,7 +128,7 @@ worlds:
     spawnLocation:
       ==: MVSpawnLocation
       x: 0.0
-      y: 65.0
+      y: 61.0
       z: 0.0
       pitch: 0.0
       yaw: 0.0
@@ -277,18 +136,18 @@ worlds:
     bedRespawn: 'true'
     worldBlacklist: []
     environment: THE_END
-    seed: '7421857742470553766'
+    seed: '9006332974926791552'
     generator: 'null'
     playerLimit: '-1'
     allowFlight: 'true'
-  MONDO3:
+  creativa2_nether:
     ==: MVWorld
     hidden: 'false'
     alias: ''
     color: WHITE
     style: NORMAL
     pvp: 'true'
-    scale: '1.0'
+    scale: '8.0'
     respawnWorld: ''
     allowWeather: 'true'
     difficulty: HARD
@@ -315,16 +174,16 @@ worlds:
     keepSpawnInMemory: 'true'
     spawnLocation:
       ==: MVSpawnLocation
-      x: 16.0
-      y: 68.0
-      z: 128.0
+      x: 5.5
+      y: 65.0
+      z: 7.5
       pitch: 0.0
       yaw: 0.0
     autoLoad: 'true'
     bedRespawn: 'true'
     worldBlacklist: []
-    environment: NORMAL
-    seed: '7421857742470553766'
+    environment: NETHER
+    seed: '9006332974926791552'
     generator: 'null'
     playerLimit: '-1'
     allowFlight: 'true'

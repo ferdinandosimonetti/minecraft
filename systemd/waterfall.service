@@ -15,9 +15,9 @@ ExecStart=/usr/bin/screen -h 1024 -dmS waterfall ./bin/waterfall-start.sh
 # If it's in the WorkingDirectory, then we can use a relative path
 
 # Send "stop" to the Minecraft server console
-ExecStop=/usr/bin/screen -p 0 -S waterfall -X eval 'stuff \"stop\"\015'
+#ExecStop=/usr/bin/screen -p 0 -S waterfall -X eval 'stuff \"stop\"\015'
 # Wait for the PID to die - otherwise it's killed after this command finishes!
-ExecStop=/bin/bash -c "while ps -p $MAINPID > /dev/null; do /bin/sleep 1; done"
+#ExecStop=/bin/bash -c "while ps -p $MAINPID > /dev/null; do /bin/sleep 1; done"
 # Note that absolute paths for all executables are required!
 
 [Install]

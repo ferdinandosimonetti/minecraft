@@ -17,7 +17,7 @@ bedrock:
   motd2: "Another GeyserMC forced host."
 remote:
   # The IP address of the remote (Java Edition) server
-  address: 192.168.0.168
+  address: 192.168.0.119
   # The port of the remote (Java Edition) server
   port: 25565
   # Authentication type. Can be offline, online, or floodgate (see https://github.com/GeyserMC/Geyser/wiki/Floodgate).
@@ -48,7 +48,7 @@ ping-passthrough: true
 max-players: 8
 
 # If debug messages should be sent through console
-debug-mode: false
+debug-mode: true
 
 # Thread pool size
 general-thread-pool: 32

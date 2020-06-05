@@ -1,5 +1,7 @@
 #!/bin/bash
-export PAPERVERSION="162"
+#export PAPERVERSION="239"
+#export PAPERVERSION="325"
+export PAPERVERSION="334"
 echo $PAPERVERSION
 export SERVER="$(find $HOME -name paper-${PAPERVERSION}.jar)"
 echo $SERVER

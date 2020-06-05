@@ -1,5 +1,6 @@
 #!/bin/bash
-export WFALLVERSION="327"
+#export WFALLVERSION="327"
+export WFALLVERSION="346"
 echo $WFALLVERSION
 export SERVER="$(find $HOME -name waterfall-${WFALLVERSION}.jar)"
 echo $SERVER
